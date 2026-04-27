@@ -219,7 +219,7 @@ inputWord.addEventListener("keydown", e => {
                 const syllable = stripAccents(promptText.toLowerCase());
                 
                 // Validate if word contains syllable, isn't a duplicate, and exists in list
-                if (!inputtedWords.includes(cleanWord) && cleanWord.includes(syllable) && words.includes(word)) {
+                if (!inputtedWords.includes(cleanWord) && cleanWord.includes(syllable) && words.includes(cleanWord)) {
                     isCorrect = true;
                     updateScore(word.length);
                     inputtedWords.push(cleanWord);
