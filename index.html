@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast but not furious</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-card">
+        
+        <h1>Fast but not furious</h1>
+
+        <div id="startContainer">
+            <div class="mode-selector">
+                <label>
+                    <input type="radio" name="gameMode" value="fr" checked> 
+                    FRANÇAIS
+                </label>
+                <label>
+                    <input type="radio" name="gameMode" value="maths"> 
+                    MATHS
+                </label>
+            </div>
+
+            <div class="time-selector">
+                <label class="time-option"><input type="radio" name="gameTime" value="15" checked> 15s</label>
+                <label class="time-option"><input type="radio" name="gameTime" value="30"> 30s</label>
+                <label class="time-option"><input type="radio" name="gameTime" value="60"> 60s</label>
+            </div>
+            <button id="startButton">START</button>
+            <button id="practiceButton">PRACTICE</button>
+        </div>
+
+        <div id="gameContainer" style="display: none;">
+            <h3 id="wordPrompt"></h3>
+            
+            <input type="text" id="inputWord" placeholder="Réponse..." autocomplete="off" />
+
+            <div style="display: flex; gap: 10px; width: 100%;">
+                <button id="skipButton">Passer (Shift + Enter)</button>
+                <button id="quitButton">Quitter (Escape)</button>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <p id="score">Score: 0</p>
+                <p id="gameTime">0s</p>
+            </div>
+        </div>
+
+        <div id="endContainer" style="display: none;">
+            <h2 style="margin: 0; color: var(--accent-color);">Terminé !</h2>
+            <p id="finalScore"></p>
+            
+            <div id="historyList">
+            </div>
+
+            <button id="restartButton">Retour (Escape)</button>
+        </div>
+
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
